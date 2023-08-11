@@ -1,34 +1,19 @@
-// import "../styles/sidebar.css";
+import { FaCog } from "react-icons/fa";
 
-// function Header() {
-//   return (
-//     <>
-//         <div className="flex justify-between items-center px-8 pt-2 pb-4 text-black sticky w-full top-0 z-50 shadow-lg">
-//           <div className="flex justify-center items-center relative">
-//             <p className="font-semibold text-base">Hello there </p>
-//           </div>
-
-//           <div className="flex flex-row flex-wrap text-black">
-//             <p
-//               className="text-xl mt-5 mr-4 hover:text-brandColor hover:underline cursor-pointer"
-//             >
-//               Store
-//             </p>
-//           </div>
-//         </div>
-//     </>
-//   );
-// }
-
-// export default Header;
-
-
-
-
-const Header = () => {
+function Header() {
   return (
-    <div>Header</div>
-  )
+    <>
+      <div className="flex justify-between items-center px-12 py-6 bg-blue-500 text-white sticky w-full top-0 z-50 shadow-lg">
+        <div className="flex justify-center items-center relative">
+          <p className="font-semibold text-2xl">CREDIT CHART</p>
+        </div>
+
+        <div className="mr-20">
+          <FaCog className="text-4xl font-semibold cursor-pointer" />
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Header
+export default Header;

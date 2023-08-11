@@ -11,7 +11,7 @@ function Sidebar() {
 
   return (
     <header className="w-24 h-screen bg-white flex flex-col items-center justify-between fixed top-0 shadow-md">
-      <section className="flex flex-col items-center mt-8">
+      <section className="flex flex-col items-center mt-24">
         <section className="mt-8">
           <Link to="/">
             <GoHome

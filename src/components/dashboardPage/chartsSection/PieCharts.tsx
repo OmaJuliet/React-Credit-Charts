@@ -1,120 +1,4 @@
-// import { useRef, useEffect } from 'react';
-// import * as echarts from 'echarts';
-// import 'echarts/lib/chart/pie';
-
-// const PieChart: React.FC = () => {
-//     const chartContainerRef = useRef<HTMLDivElement | null>(null);
-//     const myChartRef = useRef<echarts.ECharts | null>(null);
-
-//     useEffect(() => {
-//         if (!chartContainerRef.current) return;
-
-//         myChartRef.current = echarts.init(chartContainerRef.current);
-
-//         const option = {
-//             title: {
-//                 text: 'Total Population',
-//                 left: 'left'
-//             },
-//             tooltip: {
-//                 trigger: 'item'
-//             },
-//             legend: {
-//                 orient: 'vertical',
-//                 right: 'right'
-//             },
-//             series: [
-//                 {
-//                     name: 'Access From',
-//                     type: 'pie',
-//                     radius: 50,
-//                     center: ['25%', '50%'],
-//                     data: [
-//                         { value: 1048, name: 'Search Engine' },
-//                         { value: 735, name: 'Direct' },
-//                         { value: 580, name: 'Email' },
-//                         { value: 484, name: 'Union Ads' },
-//                         { value: 300, name: 'Video Ads' }
-//                     ],
-//                     emphasis: {
-//                         itemStyle: {
-//                             shadowBlur: 10,
-//                             shadowOffsetX: 0,
-//                             shadowColor: 'rgba(0, 0, 0, 0.5)'
-//                         }
-//                     },
-//                     datasetIndex: 1
-//                   },
-//                   {
-//                     name: 'Access From',
-//                     type: 'pie',
-//                     radius: 50,
-//                     center: ['75%', '50%'],
-//                     data: [
-//                         { value: 1048, name: 'Search Engine' },
-//                         { value: 735, name: 'Direct' },
-//                         { value: 580, name: 'Email' },
-//                         { value: 484, name: 'Union Ads' },
-//                         { value: 300, name: 'Video Ads' }
-//                     ],
-//                     emphasis: {
-//                         itemStyle: {
-//                             shadowBlur: 10,
-//                             shadowOffsetX: 0,
-//                             shadowColor: 'rgba(0, 0, 0, 0.5)'
-//                         }
-//                     },
-//                     datasetIndex: 2
-//                   }
-//             ]
-//         };
-
-
-//         if (option && typeof option === 'object') {
-//             myChartRef.current.setOption(option);
-//         }
-
-//         const resizeHandler = () => {
-//             if (myChartRef.current) {
-//                 myChartRef.current.resize();
-//             }
-//         };
-
-//         window.addEventListener('resize', resizeHandler);
-//         resizeHandler();
-
-//         return () => {
-//             window.removeEventListener('resize', resizeHandler);
-//             if (myChartRef.current) {
-//                 myChartRef.current.dispose();
-//                 myChartRef.current = null;
-//             }
-//         };
-//     }, []);
-
-//     return (
-//         <>
-//             <div id="chart-container" ref={chartContainerRef}
-//                 className="h-screen w-full bg-white"
-//             >
-//             </div>
-//         </>
-//     );
-// };
-
-// export default PieChart;
-
-
-
 import { PieChart, Pie, Tooltip } from 'recharts';
-
-// const data01 = [
-//   { name: 'Group A', value: 228 },
-//   { name: 'Group B', value: 70 },
-//   { name: 'Group C', value: 180 },
-//   { name: 'Group D', value: 400 },
-//   { name: 'Group E', value: 600 },
-// ];
 
 const data01 = [
   { name: 'The Retail Techs', value: 228, fill: '#4169E1' },
@@ -138,16 +22,15 @@ const PieCharts = () => {
                 data={data01}
                 cx={200}
                 cy={200}
-                // outerRadius={80}
                 outerRadius={150}
                 fill="#8884d8"
                 label
               />
               <Tooltip />
             </PieChart>
-            <section>
+            {/* <section className="mr-4">
               <p>Some texts</p>
-            </section>
+            </section> */}
           </section>
         </section>
 

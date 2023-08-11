@@ -1,27 +1,75 @@
-# React + TypeScript + Vite
+# PROJECT DOCUMENTATION
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# CREDIT CHART WEB APPLICATION
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About The Project 
 
-## Expanding the ESLint configuration
+This is a credit chart DESKTOP web application. It is NOT optimized for mobile view. It grants user access to their dashboard to view charts of business profiles.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Web App UI
+App's Figma Design Link: (https://www.figma.com/proto/cNbKhwqOms1d6kx6iUryRQ/Untitled?type=design&node-id=1-120&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A1434)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Technologies Used
+
+- React.js
+- Typescript for static typing 
+- Tailwind CSS for styling
+- Recharts to integrate charts into the application
+- React-icons and Router for navigation
+
+
+## App Features
+
+- Dashboard Page
+   - Segmentation Analysis component
+      - Total Population and Active Clients Chart
+      - Average Age and Transactional Value Analysis
+      - Average Monthly Balance
+      - Pillar Distribution
+   - Customers' Profile component
+      - Overview of total customers, transactional value, and average monthly balance
+      - Profile
+
+- Customer Page
+   - Customers Details Table
+   - Bank Profile Comparison Table
+
+
+## Sidebar Navigation 
+
+- Dashboard
+- Customer
+
+
+## App Links 
+Production Link: ()
+
+Project Github Repo Link: (https://github.com/OmaJuliet/React-Credit-Charts.git)
+
+
+## Get it on your local machine
+To get this React-Vite-Typescript application on your local machine, you need to follow these steps
+
+
+## Prerequisites
+- Node.js (v14.17.6 or later)
+- npm (v6.14.15 or later)
+
+
+### Installation
+1. Clone the repository or download the source code from GitHub. To clone it, use this command "git clone https://github.com/OmaJuliet/ React-Credit-Charts.git"
+2. Open a terminal or command prompt and navigate to the project directory.
+3. Run `npm install` to install the project dependencies.
+
+
+### Other dependencies
+- Run `npm install react-router-dom` to install the router library
+- Run `npm install recharts` to install the recharts library
+
+
+### Running and Testing the application
+2. Run `npm run dev` to start the development server.
+3. Open a web browser and go to http://127.0.0.1:5173 to view the application.

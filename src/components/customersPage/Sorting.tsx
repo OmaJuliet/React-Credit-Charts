@@ -115,8 +115,7 @@ const Sorting: React.FC = () => {
 
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-        // Handle the selected start and end dates here
-        console.log("Customer ID:", customerID);
+        console.log("Customer Id:", customerID);
     };
 
     //logic for the sort/filter modal
@@ -133,7 +132,7 @@ const Sorting: React.FC = () => {
 
     return (
         <>
-            <section className="container pt-4 px-2 mx-auto w-10/12">
+            <section className="container pt-2 px-2 mx-auto w-10/12">
                 <h2 className="mb-2 mt-3 text-2xl font-semibold">All Customers</h2>
                 <section className="flex flex-row justify-between">
                     <section className="flex flex-wrap mt-4 lg:mb-4 mb-8 relative">

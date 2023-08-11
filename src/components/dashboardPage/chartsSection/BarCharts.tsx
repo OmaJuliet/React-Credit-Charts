@@ -2,11 +2,11 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
 
 const data = [
-  { name: 'Page A', uv: 400, pv: 2400, amt: 2400, uvs: 2000, },
-  { name: 'Page B', uv: 400, pv: 2400, amt: 2400 },
-  { name: 'Page C', uv: 400, pv: 2400, amt: 2400 },
-  { name: 'Page D', uv: 400, pv: 2400, amt: 2400 },
-  { name: 'Page E', uv: 400, pv: 2400, amt: 2400 },
+  { name: 'SP', uv: 18000, pv: 2400, amt: 2400, fill: 'rgb(234 179 8)' },
+  { name: 'F&A', uv: 16000, pv: 2400, amt: 2400, fill: 'rgb(59 130 246)' },
+  { name: 'EE', uv: 13000, pv: 2400, amt: 2400, fill: 'rgb(249 115 22)' },
+  { name: 'E + E', uv: 11000, pv: 2400, amt: 2400, fill: 'rgb(30 64 175)' },
+  { name: 'Education', uv: 10000, pv: 2400, amt: 2400, fill: 'rgb(34 197 94)' },
 ];
 
 const Pillar = () => {
@@ -15,7 +15,7 @@ const Pillar = () => {
       <section className="pb-20">
         <section className="pt-6">
           <h1 className="text-xl font-medium text-gray-700">PILLAR DISTRIBUTION</h1>
-          <section className="flex flex-row mt-3 ml-2">
+          <section className="flex flex-row mt-3 ml-2 w-full">
             <section className="flex flex-row items-center ml-3">
               <div className="w-3 h-3 bg-yellow-500 rounded-full mr-1"></div>
               <p className="text-sm">Social Protection (SP)</p>
@@ -43,7 +43,7 @@ const Pillar = () => {
             <div className="bg-blue-800 flex justify-center text-xl text-white my-3 mx-4 px-4 py-3">
               <h1 className="font-semibold">The Agric Clients</h1>
             </div>
-            <BarChart width={420} height={300} data={data} className="">
+            <BarChart width={400} height={300} data={data} className="">
               <XAxis dataKey="name" stroke="#8884d8" />
               <YAxis />
               <Tooltip />
@@ -56,7 +56,7 @@ const Pillar = () => {
             <div className="bg-blue-800 flex justify-center text-xl text-white my-3 mx-4 px-4 py-3">
               <h1 className="font-semibold">The Micro Techs</h1>
             </div>
-            <BarChart width={420} height={300} data={data} className="">
+            <BarChart width={400} height={300} data={data} className="">
               <XAxis dataKey="name" stroke="#8884d8" />
               <YAxis />
               <Tooltip />
@@ -69,7 +69,7 @@ const Pillar = () => {
             <div className="bg-blue-800 flex justify-center text-xl text-white my-3 mx-4 px-4 py-3">
               <h1 className="font-semibold">The Corporates</h1>
             </div>
-            <BarChart width={420} height={300} data={data} className="">
+            <BarChart width={400} height={300} data={data} className="">
               <XAxis dataKey="name" stroke="#8884d8" />
               <YAxis />
               <Tooltip />

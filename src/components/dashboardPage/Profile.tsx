@@ -23,7 +23,7 @@ const Profile = () => {
 
   return (
     <>
-      <section className="pt-4 px-2 w-full">
+      <section className="pt-4 w-full">
         <p className="text-xl text-gray-700 font-semibold mb-2">OVERVIEW</p>
         <section className="flex flex-row">
         {data.map((item, index) => (
