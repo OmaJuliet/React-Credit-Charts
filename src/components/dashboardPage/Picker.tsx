@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "react-datepicker/dist/react-datepicker.css";
 import { FaCalendar } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
