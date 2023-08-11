@@ -18,25 +18,25 @@ type TableProps = {
 const Table: React.FC<TableProps> = ({ data }) => {
   return (
     <>
-      <section className="pt-8 pb-6">
-        <table className="table-auto w-full border-collapse">
+      <section className="pt-8 pb-5">
+        <table className="table-auto w-full border-separate border-spacing-y-2">
           <thead className="mb-2">
-            <tr className="text-gray-800">
-              <th className="py-3 px-4 text-lg font-medium text-left uppercase">Customer Name</th>
-              <th className="py-3 px-4 text-lg font-medium text-left uppercase">Customer ID</th>
-              <th className="py-3 px-4 text-lg font-medium text-left uppercase">Category</th>
-              <th className="py-3 px-4 text-lg font-medium text-left uppercase">Loan Period</th>
-              <th className="py-3 px-4 text-lg font-medium text-left uppercase">Status</th>
+            <tr className="text-gray-600">
+              <th className="py-3 px-4 text-lg font-semibold text-left uppercase">Customer Name</th>
+              <th className="py-3 px-4 text-lg font-semibold text-left uppercase">Customer ID</th>
+              <th className="py-3 px-4 text-lg font-semibold text-left uppercase">Category</th>
+              <th className="py-3 px-4 text-lg font-semibold text-left uppercase">Loan Period</th>
+              <th className="py-3 px-4 text-lg font-semibold text-left uppercase">Status</th>
             </tr>
           </thead>
-          <tbody className="my-2">
+          <tbody className="">
             {data.map((item, index) => (
-              <tr key={index} className="bg-white mb-4">
-                <td className="p-4">{item.customerName}</td>
-                <td className="p-4 text-lg">{item.customerID}</td>
+              <tr key={index} className="bg-white mb-2 border border-slate-600">
+                <td className="p-4 ">{item.customerName}</td>
+                <td className="p-4 text-base">{item.customerID}</td>
                 <td className={`p-4 ${getCategoryStyles(item.category)}`}>{item.category}</td>
-                <td className="p-4 text-lg">{item.loanPeriod}</td>
-                <td className={`p-4 text-lg flex items-center ${getStatusStyles(item.status).textColorClass}`}>
+                <td className="p-4 text-base">{item.loanPeriod}</td>
+                <td className={`p-4 text-base flex items-center ${getStatusStyles(item.status).textColorClass}`}>
                   {getStatusStyles(item.status).iconComponent}
                   {item.status}
                 </td>
@@ -48,37 +48,37 @@ const Table: React.FC<TableProps> = ({ data }) => {
 
       {/* customers page pagination */}
       <section className="flex justify-center items-center bg-white py-1">
-        <p className="px-3 py-2 text-2xl text-gray-400 font-semibold cursor-pointer">
+        <p className="px-3 py-2 text-xl text-gray-400 font-semibold cursor-pointer">
           &lt;&lt;
         </p>
-        <p className="px-3 py-2 text-2xl text-gray-400 font-semibold cursor-pointer">
+        <p className="px-3 py-2 text-xl text-gray-400 font-semibold cursor-pointer">
           &lt;
         </p>
-        <p className="px-3 py-2 text-blue-500 font-semibold text-xl cursor-pointer">
+        <p className="px-3 py-2 text-blue-500 font-semibold text-lg cursor-pointer">
           1
         </p>
-        <p className="px-3 py-2 text-gray-400 font-semibold text-xl cursor-pointer">
+        <p className="px-3 py-2 text-gray-400 font-semibold text-lg cursor-pointer">
           2
         </p>
-        <p className="px-3 py-2 text-gray-400 font-semibold text-xl cursor-pointer">
+        <p className="px-3 py-2 text-gray-400 font-semibold text-lg cursor-pointer">
           3
         </p>
-        <p className="px-3 py-2 text-gray-400 font-semibold text-xl cursor-pointer">
+        <p className="px-3 py-2 text-gray-400 font-semibold text-lg cursor-pointer">
           4
         </p>
-        <p className="px-3 py-2 text-gray-400 font-semibold text-xl cursor-pointer">
+        <p className="px-3 py-2 text-gray-400 font-semibold text-lg cursor-pointer">
           5
         </p>
-        <p className="px-3 py-2 text-gray-400 font-semibold text-xl cursor-pointer">
+        <p className="px-3 py-2 text-gray-400 font-semibold text-lg cursor-pointer">
           ...
         </p>
-        <p className="px-3 py-2 text-gray-400 font-semibold text-xl cursor-pointer">
+        <p className="px-3 py-2 text-gray-400 font-semibold text-lg cursor-pointer">
           10
         </p>
-        <p className="px-3 py-2 font-semibold text-2xl cursor-pointer">
+        <p className="px-3 py-2 font-semibold text-gray-700 text-xl cursor-pointer">
           &gt;
         </p>
-        <p className="px-3 py-2 font-semibold text-2xl cursor-pointer">
+        <p className="px-3 py-2 font-semibold text-gray-700 text-xl cursor-pointer">
           &gt;&gt;
         </p>
       </section>
@@ -108,9 +108,9 @@ function getCategoryStyles(category: string) {
 function getStatusStyles(status: string) {
   switch (status) {
     case "ACTIVE":
-      return { textColorClass: "text-green-600", iconComponent: <GoCheckbox className="inline-block mr-3 text-2xl" /> };
+      return { textColorClass: "text-green-400", iconComponent: <GoCheckbox className="inline-block mr-3 text-2xl" /> };
     case "DORMANT":
-      return { textColorClass: "text-red-600", iconComponent: <AiOutlineCloseSquare className="inline-block mr-3 text-2xl" /> };
+      return { textColorClass: "text-red-500", iconComponent: <AiOutlineCloseSquare className="inline-block mr-3 text-2xl" /> };
     default:
       return { textColorClass: "", iconComponent: null };
   }
